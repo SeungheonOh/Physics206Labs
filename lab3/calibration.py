@@ -6,7 +6,7 @@ def calibrate():
     def dist(x1, y1, x2, y2):
         return math.sqrt((x1-x2)**2 + (y1-y2)**2)
 
-    df = pd.read_csv("calibration.csv")
+    df = pd.read_csv("data/calibration.csv")
 
     dists = []
     for _, row in df.iterrows():

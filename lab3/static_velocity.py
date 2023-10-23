@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 import math
 
-wide = lambda x: "example_"+str(x)+"_.csv"
-shallow = lambda x: "static_shallow_"+str(x)+"_.csv"
+wide = lambda x: "data/example_"+str(x)+"_.csv"
+shallow = lambda x: "data/static_shallow_"+str(x)+"_.csv"
 
 tag = lambda x, y, r: r["position_px_"+str(x)+"-"+str(y)]
 

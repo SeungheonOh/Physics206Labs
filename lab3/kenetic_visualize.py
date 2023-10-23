@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 import math
 
-wide = lambda x: "kenetic_wide_"+str(x)+"_.csv"
-shallow = lambda x: "kenetic_shallow_"+str(x)+"_.csv"
+wide = lambda x: "data/kenetic_wide_"+str(x)+"_.csv"
+shallow = lambda x: "data/kenetic_shallow_"+str(x)+"_.csv"
 
 tag = lambda x, y, r: r["position_px_"+str(x)+"-"+str(y)]
 
