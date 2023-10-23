@@ -15,7 +15,7 @@ def angle(x1, y1, x2, y2, x3, y3):
     v2 = [x3-x1, y3-y1]
     return np.degrees(np.arccos(np.dot(v1, v2)/(np.linalg.norm(v1) * np.linalg.norm(v2))))
 
-MOVEMENT_THRESHOLD = 50
+MOVEMENT_THRESHOLD = 100
 
 def doThing(fname):
     angles = []
@@ -38,19 +38,23 @@ def doThing(fname):
                                     tag("x", "hotpink", r),
                                     tag("y", "hotpink", r),
                                     tag("x", "yellowneon", r),
-                                    tag("y", "yellowneon", r)))       
+                                    tag("y", "yellowneon", r)))
                 break
             else:
                 greenPinkDists.append(gpdist)
-            
+
     return angles
 
 
 w = doThing(wide)
 s = doThing(shallow)
 
-print("shallow angles: ", s, "\nAverage: ", np.average(s))
-print("shallow coefficent of friction: ", np.tan(np.radians(np.average(s))))
-print("wide angles: ", w, "\nAverage: ", np.average(w))
-print("wide coefficent of friction: ", np.tan(np.radians(np.average(w))))
-
+print("shallow angles: ", np.round(s,2))
+print("shallow coefficent of frictions: \n", np.tan(np.radians(s)))
+print("shallow coefficent of friction: ", np.average(np.tan(np.radians(s))))
+print("error: ", np.std(np.tan(np.radians(s)))/math.sqrt(len(s)))
+print()
+print("wide angles: ", np.round(w,2))
+print("wide coefficent of frictions: \n", np.tan(np.radians(w)))
+print("wide coefficent of friction: ", np.average(np.tan(np.radians(w))))
+print("error: ", np.std(np.tan(np.radians(w)))/math.sqrt(len(w)))
