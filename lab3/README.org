@@ -9,6 +9,9 @@ Meter per pixel: 0.0006633750457417282
 
 ** static friction
 
+Since
+$$F_f = \mu_s \cos{(\theta)}mg = \sin{(\theta)}mg$$,
+$$\mu_s = \frac{\sin{\theta}mg}{\cos{\theta}mg} = \tan{(\theta)}$$
 #+begin_example
 shallow angles:  [39.88 49.05 46.11 43.36 38.82 37.85 36.9  35.47 37.86]
 shallow coefficent of frictions: [0.83558255 1.15246753 1.03942562 0.94444729 0.80450522 0.77712053 0.75076112 0.71250407 0.77746525]
@@ -22,6 +25,9 @@ error:  0.00895083100707547
 #+end_example
 ** kenetic friction 
 
+$$
+  \mu_k = \frac{\alpha - \sin{(\theta)}g}{ - \cos{(\theta)}g}
+$$
 #+begin_example
 wide coefficient of frictions:  [0.3622640159244875, 0.2824501537678485, 0.31583500954296995, 0.34794750777705485, 0.30699029065901556, 0.30127262091298795, 0.30835493024822985, 0.2953367067406237, 0.23374781278584827]
 wide coefficient of frictions avg:  0.30602211648434063
